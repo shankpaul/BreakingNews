@@ -1,0 +1,16 @@
+{
+  "name": "BreakingNews",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "socket.io" : "0.9.16",
+    "express": "3.4.4",
+    "ejs": "*",
+    "stylus": "*",
+    "cheerio":"0.12.4",
+    "request":"2.27.0"
+  }
+}

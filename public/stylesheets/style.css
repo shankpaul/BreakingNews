@@ -1,0 +1,77 @@
+body {
+  padding: 0;
+  margin: 0;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+a {
+  color: #00b7ff;
+}
+.head {
+  height: auto;
+  padding: 10px;
+  margin: 0;
+  background: none repeat scroll 0 0 #ec6f66;
+  position: fixed;
+  width: 100%;
+}
+.head h1 {
+  margin: 0;
+  padding: 0;
+}
+.content {
+  padding: 10px;
+}
+.news-block {
+  border: 1px solid #ccc;
+  width: 600px;
+  margin: auto;
+  padding-top: 50px;
+  height: auto;
+}
+.news-block > h2 {
+  background: #ccc;
+  color: #ccc;
+  margin: 0;
+}
+.news-block ul {
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+}
+.news-block ul li {
+  list-style: none;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
+.news-block ul li img {
+  float: left;
+  width: 120px;
+  head: 70px;
+  border: 1px solid #ccc;
+  padding: 1px;
+  float: left;
+}
+.news-block ul li p a {
+  color: #252519;
+  text-decoration: none;
+}
+.news-block ul li p a:hover {
+  color: #00b7ff;
+}
+.news-block ul li p {
+  float: left;
+  padding: 0px 5px 0 10px;
+  margin: 0;
+  width: 75%;
+}
+.news-block ul li p .source {
+  color: #ccc;
+font-size
+  text-transform: uppercase;
+}
+.fetching {
+  color: #ccc;
+  text-align: center;
+  font-size: 15px;
+}

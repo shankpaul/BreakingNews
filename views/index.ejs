@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+      <script src="/socket.io/socket.io.js"></script>
+      <script>
+          $(document).ready(function(){
+
+              var socket=io.connect();
+              var $news_box=$('#news_box');
+              socket.emit('fetchnews','fetch');
+              socket.on('latestnews',function(data){
+              $('.fetching').fadeOut();
+                  $news_box.empty();
+              for(x in data)
+              {
+                  a = '<li>';
+                  b = '<img src="'+data[x].news_image+'">';
+                  c = '<p><span class="source">'+ data[x].news_source +'</span><br><a href="'+data[x].news_link +' " target="_blank"> '+data[x].news_title +'</a></p>';
+                  d = '<br style="clear: both">';
+                  e = '</li>';
+                  row= a+b+c+d+e;
+                  $news_box.append(row);
+              }
+              })
+          })
+
+      </script>
+  </head>
+  <body>
+    <div class="head">
+        <h1>Breaking <span>News</span></h1>
+    </div>
+  <div class="content">
+      <div class="news-block">
+
+          <div class="news-content">
+              <ul id="news_box">
+                  <!--<li>-->
+                      <!--<img src="images/news.jpg">-->
+                      <!--<p>-->
+                          <!--<span class="source">asas</span>-->
+                          <!--<br>-->
+                          <!--hajshajs-->
+                      <!--</p>-->
+                      <!--<br style="clear: both">-->
+                  <!--</li>-->
+                    <div class="fetching">Fetching News...</div>
+              </ul>
+          </div>
+      </div>
+      </div>
+  </body>
+</html>
